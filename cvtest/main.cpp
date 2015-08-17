@@ -34,9 +34,9 @@ Mat& ScanImageAndReduceC(Mat& I, const uchar* const table)
 
 int main()
 {
-    Mat image = imread("/home/houzy/opencv/opencvpro/myFirstOpenCv/lena.jpg", CV_LOAD_IMAGE_COLOR);
+    Mat image = imread("../lena.jpg", CV_LOAD_IMAGE_COLOR);
     imshow("image", image);
-    imwrite("/home/houzy/opencv/opencvpro/lena.jpg", image);
+    imwrite("../output/lena.jpg", image);
 
     Mat image2 = image.clone();
     cout << "depth() == " << image2.depth() << endl;
