@@ -4,7 +4,9 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    trackbar_test.cpp
+    trackbar_test.cpp \
+    houghlines.cpp \
+    cornerHarris_demo.cpp
 
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../../usr/local/lib/release/ -lopencv_core
@@ -13,3 +15,8 @@ else:unix: LIBS += -L$$PWD/../../../../../usr/local/lib/ -lopencv_core -lopencv_
 
 INCLUDEPATH += $$PWD/../../../../../usr/local/include
 DEPENDPATH += $$PWD/../../../../../usr/local/include
+
+HEADERS += \
+    trackbar_test.h \
+    houghlines.h \
+    cornerHarris_demo.h

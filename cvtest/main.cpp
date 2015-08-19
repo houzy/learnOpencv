@@ -1,6 +1,8 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include "trackbar_test.h"
+#include "houghlines.h"
+#include "cornerHarris_demo.h"
 
 using namespace std;
 using namespace cv;
@@ -36,10 +38,11 @@ Mat& ScanImageAndReduceC(Mat& I, const uchar* const table)
 int main()
 {
     Mat image = imread("../lena.jpg", CV_LOAD_IMAGE_COLOR);
+
+#if 0
     imshow("image", image);
     imwrite("../output/lena.jpg", image);
 
-#if 0
     Mat image2 = image.clone();
     cout << "depth() == " << image2.depth() << endl;
     cout << "rows == " << image2.rows << endl;
@@ -72,7 +75,6 @@ int main()
     imshow("pyrUpx4", image8);
 
     trackbar_test("../lena.jpg");
-#endif
 
     Mat image9 = image.clone();
     cvtColor(image, image9, COLOR_RGB2GRAY);
@@ -92,6 +94,13 @@ int main()
     convertScaleAbs(grad_y, abs_grad_y);
     addWeighted(abs_grad_x, 0.8, abs_grad_y, 0.8, 0, grad);
     imshow("Sobel", grad);
+#endif
+
+    // houghlines("../sample.jpg");
+
+    // cornerHarris_test("../sample.jpg");
+
+    cornerHarris_test("../sample2.png");
 
     waitKey(0);
 

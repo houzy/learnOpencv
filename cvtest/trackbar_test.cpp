@@ -12,7 +12,7 @@ int const max_value = 255;
 int const max_type = 4;
 int const max_BINARY_value = 255;
 
-Mat src, src_gray, dst;
+static Mat src, src_gray, dst;
 const char* windows_name = "Threshold Demo";
 
 const char* trackbar_type = "Type:\n 0: Binary\n 1: Binary Inverted\n 2: Truncate\n 3: To Zero\n 4: To Zero Inverted";
