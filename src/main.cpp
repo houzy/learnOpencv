@@ -37,7 +37,7 @@ Mat& ScanImageAndReduceC(Mat& I, const uchar* const table)
 
 int main()
 {
-    Mat image = imread("../lena.jpg", CV_LOAD_IMAGE_COLOR);
+    Mat image = imread("../images/lena.jpg", CV_LOAD_IMAGE_COLOR);
 
 #if 0
     imshow("image", image);
@@ -100,7 +100,7 @@ int main()
 
     // cornerHarris_test("../sample.jpg");
 
-    cornerHarris_test("../sample2.png");
+    cornerHarris_test("../images/sample2.png");
 
     waitKey(0);
 
