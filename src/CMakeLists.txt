@@ -1,4 +1,4 @@
-ADD_LIBRARY(learnopencv cornerHarris_demo.cpp houghlines.cpp trackbar_test.cpp)
-ADD_EXECUTABLE(main main.cpp)
+# ADD_LIBRARY(learnopencv houghlines.cpp trackbar_test.cpp)
+ADD_EXECUTABLE(harris_corners harris_corners.cc)
 #link OpenCV
-TARGET_LINK_LIBRARIES(main learnopencv ${OpenCV_LIBS})
+TARGET_LINK_LIBRARIES(harris_corners ${OpenCV_LIBS})
