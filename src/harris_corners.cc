@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     cout<<"input_image type: "<<input_image.type()<<endl;
     imshow("input_image", input_image);
 
-    // 检测Harris角点
+    // 检测Harris角点, 也就是计算每个像素的角点响应函数值
     cv::cornerHarris(
             input_image,    // 输入图像
             cornerStrength, // 角点强度图像
