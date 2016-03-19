@@ -23,13 +23,19 @@ int main(int argc, char *argv[])
             3,              // 口径尺寸
             0.01            // Harris参数
             );
-    imshow("cornerStrength", cornerStrength);
+    //imshow("cornerStrength", cornerStrength);
 
     // 对角点强度阈值化
     Mat cornerTh;
     double thresholdval = 0.0001;
     cv::threshold(cornerStrength, cornerTh, thresholdval, 255, cv::THRESH_BINARY);
     imshow("harrisCorners", cornerTh);
+
+    waitKey(0);
+
+    // 上面的检测方法有好几个参数，导致比较难以调节。而且得到的角点分布图中包含很多
+    // 聚集的角点像素，而不是期望的具有明确定位的角点。因此使用自定义的HarrisDetector
+    // 类改进角点检测方法。
 
     waitKey(0);
 

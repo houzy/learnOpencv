@@ -37,6 +37,9 @@ if(POLICY CMP0043)
   cmake_policy(SET CMP0043 OLD)
 endif()
 
+# Project name
+PROJECT(Learn CXX)
+
 #----------------------------------------------------------------------------
 # - Add functionality provided by standard and custom modules
 # See the documentation in each of these modules for further details.
@@ -46,9 +49,6 @@ set(${PROJECT_NAME}_VERSION "0.1.0")
 set(${PROJECT_NAME}_VERSION_MAJOR "0")
 set(${PROJECT_NAME}_VERSION_MINOR "1")
 set(${PROJECT_NAME}_VERSION_PATCH "0")
-
-# Project name
-PROJECT(Learn CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake-modules)
 
